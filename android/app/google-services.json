@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "515380437846",
+    "project_id": "one-practice",
+    "storage_bucket": "one-practice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515380437846:android:581aa494ca9cac9d2decf7",
+        "android_client_info": {
+          "package_name": "com.mmehedid.fire_data"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515380437846-r7qi53t53n46ejetoqsrn1gqbj4cqjfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzF3GJhPAr_PhnS98McM1vdgfnjJOlkms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515380437846-r7qi53t53n46ejetoqsrn1gqbj4cqjfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

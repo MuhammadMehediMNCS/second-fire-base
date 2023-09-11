@@ -1,0 +1,95 @@
+import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
+
+class MyOtp extends StatefulWidget {
+  const MyOtp({super.key});
+
+  @override
+  State<MyOtp> createState() => _MyOtpState();
+}
+
+class _MyOtpState extends State<MyOtp> {
+  @override
+  Widget build(BuildContext context) {
+    final defaultPinTheme = PinTheme(
+      width: 56,
+      height: 56,
+      textStyle: const TextStyle(fontSize: 20, color: Color.fromRGBO(30, 60, 87, 1), fontWeight: FontWeight.w600),
+      decoration: BoxDecoration(
+        border: Border.all(color: const Color.fromRGBO(234, 239, 243, 1)),
+        borderRadius: BorderRadius.circular(20)
+      )
+    );
+    final focusedPinTheme = defaultPinTheme.copyDecorationWith(
+      border: Border.all(color: const Color.fromRGBO(114, 178, 238, 1)),
+      borderRadius: BorderRadius.circular(8)
+    );
+    final submittedPinTheme = defaultPinTheme.copyWith(
+      decoration: defaultPinTheme.decoration!.copyWith(
+        color: const Color.fromRGBO(234, 239, 243, 1)
+      )
+    );
+
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.arrow_back_ios_rounded, color: Colors.black,)
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'images/OTP_Verify.png',
+              width: 220,
+              height: 220,
+            ),
+            const SizedBox(height: 12),
+            const Text(
+              'Phone Verification',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            const Text(
+              'We need to register your phone without getting started !',
+              style: TextStyle(fontSize: 16),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 45),
+            const Pinput(
+              length: 6,
+              showCursor: true,
+            ),
+            const SizedBox(height: 12),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size.fromHeight(50),
+                primary: Colors.green.shade300,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)
+                )
+              ),
+              onPressed: () {},
+              child: const Text('Verify Phone Number')
+            ),
+            Row(
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Edit Phone Number',
+                    style: TextStyle(color: Colors.black),
+                  )
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
